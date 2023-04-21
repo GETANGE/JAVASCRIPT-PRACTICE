@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manupulation.</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <form action="" name="form1">
+        Enter Name:
+        <input type="text" name="name">
+        <input type="button" value="PrintName" onclick="printName()"><br>
+
+        Enter No:<input type="text" id="number">
+        <input type="button" value="Cube" onclick="getCube()">
+    </form>
+</body>
+ <script>
+      //change the inner content of the html page.
+
+      document.getElementById("demo").innerHTML ='Hello world!';
+
+      function printName() {
+        var name = document.form1.name.value;
+         alert('welcome back '+name);
+      }
+//document.getElementById method.
+      function getCube() {
+        //stores the id element to be returned for faster access.
+        let number=document.getElementById('number').value;
+        alert(number*number*number); 
+      }
+//document.getElementByName method.
+
+ </script>
+</html>
