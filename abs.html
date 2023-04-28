@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute method</title>
+    <style>
+      #error {
+        color: red;
+      }
+
+    </style>
+</head>
+<body>
+     <form action="">
+      <label for="">Email</label><br>
+      <input type="text" id="input"><br>
+
+      <div id="error"></div>
+     </form>
+</body>
+<script>
+  const input = document.getElementById('input');
+  const error = document.getElementById('error');
+
+  input.onblur = function(){
+    if(!input.value.includes('@')){
+      //not a valid email address
+      input.classList.add('invalid');
+      error.innerHTML = 'Please enter a valid email address'
+    }
+  };
+
+  input.onfocus = function(){
+    if(this.classList.contains('invalid')){
+      //remove the "error" indication.
+      this.classList.remove('invalid');
+      error.innerHTML = '';
+    }
+  }
+</script>
+
+</html>
