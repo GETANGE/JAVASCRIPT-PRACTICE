@@ -46,3 +46,22 @@ let randomArray2=[99,101,103,107]
 
 let firstOddNumber=randomArray2.find(isOdd);
 console.log(firstOddNumber);
+
+//find() with Object elements.
+const team=[
+    {name:"Bill", age: 20},
+    {name:"Alonso", age:15},
+    {name:"Barry", age:34},
+    {name:"Emmanuel",age: 38},
+];
+
+function isAdult(member){
+    if(member.age>=18){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+let team1=team.find(isAdult);
+console.log(team1);
