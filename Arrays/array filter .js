@@ -12,11 +12,11 @@ function checkEven(number){
 
 //function to check odd numbers
 function checkOdd(number){
-    if (number % 2== 0){
-        return false;
+    if (number % 2== 1){
+        return true;
     }
     else{
-        return true;
+        return false;
     }
 }
 

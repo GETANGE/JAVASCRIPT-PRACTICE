@@ -27,3 +27,22 @@ console.log(evenNumber);
 //get the first odd number.
 let oddNumber=array.find(checkOdd);
 console.log(oddNumber);
+
+//Method 2
+function isEven(element){
+    return element %2==0;
+}
+
+let randomArray=[23,45,48,89]
+
+let firstEvenNumber=randomArray.find(isEven);
+console.log(firstEvenNumber);
+
+function isOdd(element){
+    return element %2==1;
+}
+
+let randomArray2=[99,101,103,107]
+
+let firstOddNumber=randomArray2.find(isOdd);
+console.log(firstOddNumber);
