@@ -13,11 +13,11 @@ function checkEven(number) {
 
 //check if the number is odd
 function checkOdd(number){
-    if(number %2==0){
-        return false;
+    if(number %2==1){
+        return true;
     }
     else{
-        return true;
+        return false;
     }
 }
 //get the first even number.
