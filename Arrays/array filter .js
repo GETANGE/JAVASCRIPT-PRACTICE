@@ -20,9 +20,25 @@ function checkOdd(number){
     }
 }
 
+//to check prime numbers.
+function isPrime(number) {
+    if (number <= 1) {
+      return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  
 //create a new array by filter.
 let evenNumbers=numbers.filter(checkEven);
 console.log("Even Numbers are: "+evenNumbers);
 
 let oddNumbers=numbers.filter(checkOdd);
 console.log("Odd Numbers are: "+oddNumbers);
+
+let primeNumbers=numbers.filter(isPrime);
+console.log("Prime Numbers are: "+primeNumbers);
