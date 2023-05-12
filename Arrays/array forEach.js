@@ -8,8 +8,8 @@ function computeSquare(element){
 numbers.forEach(computeSquare);
 
 //function to print all elements in the array
-function printElement(items, index){
-    console.log("The Price is "+index+":"+items)
+function printElement(prices, index){
+    console.log("The Price is "+index+":"+prices)
 }
 
 const prices=[1800,1300,1500,1200]
