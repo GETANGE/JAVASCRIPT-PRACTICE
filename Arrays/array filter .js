@@ -42,3 +42,92 @@ console.log("Odd Numbers are: "+oddNumbers);
 
 let primeNumbers=numbers.filter(isPrime);
 console.log("Prime Numbers are: "+primeNumbers);
+
+//practice 2:method to show authurs of books 
+const books = [
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, genre: "Fiction" },
+  { title: "1984", author: "George Orwell", year: 1949, genre: "Science Fiction" },
+  { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951, genre: "Fiction" },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925, genre: "Fiction" },
+  { title: "The Lord of the Rings", author: "J.R.R. Tolkien", year: 1954, genre: "Fantasy" },
+  { title: "Animal Farm", author: "George Orwell", year: 1945, genre: "Fiction" },
+  { title: "Brave New World", author: "Aldous Huxley", year: 1932, genre: "Science Fiction" }
+];
+
+//function to show books written in year 1940 and above.
+function Books(Authur){
+  if(Authur.year>=1940){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//function to show books entitled to science.
+function Science(title){
+  if(title.genre=="Fiction"){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//function to print books written by George Orwell.
+function George(name){
+  if(name.author=="George Orwell"){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+let author=books.filter(George);
+console.log("Books written by George Orwell :")
+console.log(author);
+
+let books2=books.filter(Science);
+console.log("Books written entirely on fiction include:");
+console.log(books2);
+
+let Books1=books.filter(Books);
+console.log("These books are as follows: ");
+console.log(Books1);
+
+//Method 3 filter names which longer than others.
+const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace","Emmanuel"];
+
+function Names(person){
+  if(person.length>4){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function Namess(person){
+  if(person.length<4){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function Namess1(person){
+  if(person.length){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+let names3=names.filter(Namess1);
+console.log("List of all names");
+console.log(names3);
+
+let names2=names.filter(Namess);
+console.log("Names with less than 3 letters");
+console.log(names2);
+
+let names1=names.filter(Names);
+console.log("Names with more than 4 letters: ");
+console.log(names1);
