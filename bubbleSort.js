@@ -14,7 +14,7 @@ function bubbleSort(arr) {
 
 // Example usage
 const unsortedArr = [3, 7, 1, 9, 2,20];
-console.log("Unsorted array:", unsortedArr); // [3, 7, 1, 9, 2]
+console.log("Unsorted array:", unsortedArr);
 
 const sortedArr = bubbleSort(unsortedArr);
 console.log("Sorted array:", sortedArr); // [1, 2, 3, 7, 9]
