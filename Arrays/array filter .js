@@ -90,7 +90,7 @@ console.log("Books written entirely on fiction include:");
 console.table(books2);
 
 let Books1=books.filter(Books);
-console.log("These books are as follows: ");
+console.log("The books that were written 1940 and above are as follows: ");
 console.table(Books1);
 
 //Method 3 filter names which longer than others.
