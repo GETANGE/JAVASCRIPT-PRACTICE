@@ -53,7 +53,7 @@ const books = [
   { title: "Animal Farm", author: "George Orwell", year: 1945, genre: "Fiction" },
   { title: "Brave New World", author: "Aldous Huxley", year: 1932, genre: "Science Fiction" }
 ];
-
+console.table(books);
 //function to show books written in year 1940 and above.
 function Books(Authur){
   if(Authur.year>=1940){
@@ -83,15 +83,15 @@ function George(name){
 
 let author=books.filter(George);
 console.log("Books written by George Orwell :")
-console.log(author);
+console.table(author);
 
 let books2=books.filter(Science);
 console.log("Books written entirely on fiction include:");
-console.log(books2);
+console.table(books2);
 
 let Books1=books.filter(Books);
 console.log("These books are as follows: ");
-console.log(Books1);
+console.table(Books1);
 
 //Method 3 filter names which longer than others.
 const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace","Emmanuel"];
@@ -121,13 +121,13 @@ function Namess1(person){
 }
 
 let names3=names.filter(Namess1);
-console.log("List of all names");
-console.log(names3);
+console.log("List of all names : ");
+console.table(names3);
 
 let names2=names.filter(Namess);
 console.log("Names with less than 3 letters");
-console.log(names2);
+console.table(names2);
 
 let names1=names.filter(Names);
 console.log("Names with more than 4 letters: ");
-console.log(names1);
+console.table(names1);
