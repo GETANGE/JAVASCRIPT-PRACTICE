@@ -55,3 +55,24 @@ class house{
 //create a new object from the class.
 const object1 = new house("JoyElizabeth","P.O Box 234","Tom Mboya Street","Nairobi","Kenya");
 console.table(object1);
+
+class Car{
+    constructor(name,owner,model,registration){
+        this.name = name;
+        this.owner = owner;
+        this.model = model;
+        this.registration = registration;
+    }
+
+    //define  the method
+    display1(){
+        console.log(`Car Name: ${this.name}, the Owner is : ${this.owner} ,the model is : ${this.model} and the number plate is : ${this.registration}` );
+    }
+}
+
+//creat an object to access using property names.
+const car1 = new Car("Mercedes","Getange","Benz","KDD 345K");
+console.log(car1.name,car1.model,car1.owner,car1.registration);
+
+//accessing using the method.
+car1.display1()
