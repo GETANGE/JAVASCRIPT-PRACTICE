@@ -40,3 +40,18 @@ class PERSON{
 const object=new PERSON("Emmanuel",22,100000);
 console.table(object);
 console.log(object.display());
+
+
+//example 3
+class house{
+    constructor(name, address,street,city,state){
+        this.name=name;
+        this.address=address;
+        this.street=street;
+        this.city=city;
+        this.state=state;
+    }
+} 
+//create a new object from the class.
+const object1 = new house("JoyElizabeth","P.O Box 234","Tom Mboya Street","Nairobi","Kenya");
+console.table(object1);
