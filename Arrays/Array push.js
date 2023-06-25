@@ -1,7 +1,7 @@
 //this method is used to push new elements to the end of the array.
 let cities=['London','New York','Nairobi','Kisumu']
 cities.push('Kisii');
-console.log(cities);
+console.table(cities);
 
 var languages = ["JavaScript", "Python", "Java", "Lua"];
 let count=languages.push('Rust');
