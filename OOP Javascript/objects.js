@@ -24,7 +24,7 @@ function locateHome(Estate,House,DoorNumber){
 }
 //create an object.
 const home1 = locateHome("Nyari Estate","King Bizzy",23);
-const home2 = locateHome("Nyari estate","Otile Brown",24);
+const home2 = locateHome("Nyari Estate","Otile Brown",24);
 
 console.log(home1.getFullDetails());
 console.log(home2.getFullDetails());
