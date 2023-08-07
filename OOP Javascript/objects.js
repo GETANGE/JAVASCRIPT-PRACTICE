@@ -37,6 +37,11 @@ delete home2['DoorNumber'];
 console.log(home1.getFullDetails());
 console.log(home2.getFullDetails());
 
+//adding properties.
+//call the name of the object first then the propertyto be added.
+home1['County'] ="Kisii";
+console.log(home1);
+
 //declaring functions internally.
 //function should start with capital letter.
 const home= new Function('address',`

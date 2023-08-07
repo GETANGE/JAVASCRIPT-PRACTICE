@@ -36,14 +36,14 @@ const person2 = createPerson("JoyElizabeth","Kiboi","Muthoni");
 
 //adding properties to objects.
 createPerson.location ={District: 'Bomariba'}
-createPerson['code']={address: 123};
+person1['code']={address: 123};
 let propertyName='home';
-createPerson[propertyName]={NAME:'Kiamuyu'}
+person1[propertyName]={NAME:'Kiamuyu'}
 
 //deleting  property from objects
-delete createPerson.middleName;
+delete person1['middleName'];
 //display the person created.
-console.log(person1.getFullName());
+console.log(person1);
 console.log(person2.getFullName());
 
 //using the constructor functions.
