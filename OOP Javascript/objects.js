@@ -28,3 +28,23 @@ const home2 = locateHome("Nyari Estate","Otile Brown",24);
 
 console.log(home1.getFullDetails());
 console.log(home2.getFullDetails());
+
+//delete property.
+//start with object then select the property to delete.
+delete home1['Estate'];
+delete home2['Estate'];
+delete home2['DoorNumber'];
+console.log(home1.getFullDetails());
+console.log(home2.getFullDetails());
+
+//declaring functions internally.
+//function should start with capital letter.
+const home= new Function('address',`
+  this.address=address;
+  this.display=function(){
+    console.log("My address is");
+  } 
+`);
+//create a new object.
+const address= new home(1234);
+console.log(address);
