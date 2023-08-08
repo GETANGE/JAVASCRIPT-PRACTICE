@@ -34,8 +34,8 @@ console.log(home2.getFullDetails());
 delete home1['Estate'];
 delete home2['Estate'];
 delete home2['DoorNumber'];
-console.log(home1.getFullDetails());
-console.log(home2.getFullDetails());
+console.log(home1);
+console.log(home2);
 
 //adding properties.
 //call the name of the object first then the propertyto be added.

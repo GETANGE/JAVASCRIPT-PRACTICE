@@ -106,3 +106,40 @@ function increase(obj){
 
 increase(obj);
 console.log(obj.value);
+
+
+//enumarating properties.
+//using "for....in..." loop.
+
+const person5={
+    name: "John Doe",
+    age: 18,
+    occupation: "Fullstack Developer"
+}
+for(let property in person5) {
+    console.log(property,person5[property]);
+}
+
+//using "for....of..." loop.
+let person6={
+    name: "John Doe",
+    age: 30,
+    occupation: "Software Engineer",
+}
+person6['salary']= '350KWD'
+person6['contract']=function(){
+    console.log("signed");
+}
+for ( const person in person6){
+    //not to display the function.
+    if(typeof person6[person]!=='function')
+    console.log(person+" : "+person6[person]);
+}
+//to get all keys in an object use "Object.keys"
+const keys=Object.keys(person6)
+console.log(keys);
+
+//used to check for properties in the object.
+if('contract' in person6){
+    console.log("Contract is signed.....");
+}
