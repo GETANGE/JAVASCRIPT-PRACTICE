@@ -27,6 +27,7 @@ function Stopwatch(){
         duration=0;
     }
     Object.defineProperty(this,'duration',{
+        //get is used to read a property.
         get: function(){
             return duration;
         }
