@@ -50,5 +50,40 @@ let money = 0;
 if(money){
     console.log("Dont sleep at all");
 }else{
-    console.log("Get rour ass to work for money");
+    console.log("Get your ass out to work for money");
 }
+
+//equality operators.
+let favorite= 21;
+// if(favorite== 23){ // '23' == 23
+   // console.log(`Cool! ${favorite} is an amazing number`);
+//}
+/*
+convert to number from string.
+ const favorite= Number(prompt("What is your favorite number?"));
+ if(favorite=== 23){ // 23 == 23
+    console.log(`Cool! ${favorite} is an awesome number`);
+}
+*/ 
+if(favorite=== 23){ // 23 == 23
+    console.log(`Cool! ${favorite} is an awesome number`);
+}
+if(favorite !==23){ // strict mode.
+    console.log("Why not 23 ?");
+}
+
+let age2 = 18;
+//example 1.
+//age >= 18 ? console.log("Allowed to drink wine") : console.log("Strictly drink water");
+
+//example 2 of conditional operators
+const drink = age2 >= 18 ? console.log("Allowed to drink wine") : console.log("Please just take water");
+console.log(drink);
+
+let drink2;
+if(age2 >= 18){
+    drink2 = 'Drink wine';
+}else{
+    drink2 = 'Drink Water';
+}
+console.log(drink2);
