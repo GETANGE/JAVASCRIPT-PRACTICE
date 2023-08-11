@@ -16,10 +16,18 @@ logger();
 
 //function declaration.
 //function with parameters. parameters act like varibles that are only used within the function.
+
+//calling a function within function.
+const cutFruits=function(fruit) {
+    return fruit*4;
+}
 function fruitProcessor(apples, oranges){
     //console.log(apples,oranges);
+    const applePieces=cutFruits(apples);
+    const orangePieces=cutFruits(oranges);
     const juice = `Juice is composed of ${apples} apples and  ${oranges} oranges.`;
-    return juice;
+    let juice2 = `Juice is composed of ${applePieces} pieces of apples and ${orangePieces} pieces of orange`;
+    return juice , juice2;
 }
 //arguments representing the apples and oranges respectively.
 fruitProcessor(3,7);
