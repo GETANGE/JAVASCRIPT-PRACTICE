@@ -49,9 +49,59 @@ console.log(age4+ " years");
 
 //example 3.
 const yearOfRetire =(birthYear,firstName )=>{
-    const age = 2023-birthYear;
+    const age = calculateAge(birthYear);
     const retire= 70-age;
-    return `${firstName} retires in the next ${retire} years`;
+
+    if(retire>0){
+        console.log (`${firstName} retires in the next ${retire} years`);
+        return retire;
+    }else{
+        console.log(`${firstName} has already retired`);
+        return -1;
+    }
+   // return `${firstName} retires in the next ${retire} years`;
 }
 console.log(yearOfRetire(2001,"Emmanuel"));
 console.log(yearOfRetire(2002,"JoyElizabeth"));
+
+//jonas function challenge
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const scoreDolphins = calcAverage(44, 23, 71);
+console.log(scoreDolphins);
+const scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreKoalas);
+
+let checkWinner = function (scoreKoalas, scoreDolphins) {
+    if (scoreKoalas >= 2 * scoreDolphins) {
+        console.log(`Koalas win (${scoreKoalas} vs. ${scoreDolphins})`);
+    } else if (scoreDolphins >= 2 * scoreKoalas) {
+        console.log(`Dolphins win (${scoreDolphins} vs. ${scoreKoalas})`);
+    } else {
+        console.log("No team wins...");
+    }
+};
+
+checkWinner(scoreKoalas, scoreDolphins);
+
+
+//ARRAYS.
+let friends=['Emmanuel','DanielBrian','JoyElizabeth']
+console.log(friends);
+console.log("The total number of elements are :"+friends.length); // total number of friends in the array.
+console.log("The last element in the array is : "+friends[friends.length-1]);  // used to access the last element in the array.
+
+//mutate the array
+friends[1] ='Getange';  //used to replace the array in the index allocated with the new array.
+console.log(friends)
+
+let years= new Array(2001,2002,2003,2004,2005,2006,2007,2008,2009);
+console.log(years)
+let calAge=calculateAge(years[3])
+console.log(calAge)
+
+//full details containing my profile.
+let firstName='Emmanuel';
+let Emmanuel=[firstName, 'Getange', 22,'Programmer', friends];
+console.log(Emmanuel);
+
+//BASIC OPERATIONS IN ARRAYS.
