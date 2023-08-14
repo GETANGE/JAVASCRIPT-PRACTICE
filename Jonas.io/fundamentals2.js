@@ -105,3 +105,29 @@ let Emmanuel=[firstName, 'Getange', 22,'Programmer', friends];
 console.log(Emmanuel);
 
 //BASIC OPERATIONS IN ARRAYS.
+// array push
+//adding elements to the array at the end of the array.
+friends.push('Jonas');
+console.log(friends);
+
+//adding elements to the array from the beginning of the array.
+friends.unshift('Muthoni');
+console.log(friends);
+
+//removing elements from the array.
+const popped=friends.pop();//last element removed.
+console.log(friends);
+console.log(popped);
+
+friends.shift(); //first element removed
+console.log(friends);
+
+console.log(friends.indexOf('Getange')); //returns the index of the element.
+
+// method includes
+// ES6 ARRAY method [boolean]
+console.log(friends.includes('Getange'));
+
+if(friends.includes('JoyElizabeth')) {
+    console.log(`You have a friend called JoyElizabeth`)
+}
