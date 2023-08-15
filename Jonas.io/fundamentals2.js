@@ -131,3 +131,46 @@ console.log(friends.includes('Getange'));
 if(friends.includes('JoyElizabeth')) {
     console.log(`You have a friend called JoyElizabeth`)
 }
+
+// use of objects in javascript.
+const JonasObject ={
+    firstName: "Mokomba",
+    lastName: "Nyaboe" ,
+    age: 2023-1972,
+    job : "Fullstack Developer",
+    friends: ['Ombongi', 'Taabu', 'Sylus']
+}
+console.log(JonasObject);
+console.log(JonasObject.friends);
+
+// when do we use the dot notation and bracket notation.
+let nameKey = 'Name';
+console.log(JonasObject['first'+nameKey]);
+console.log(JonasObject['last'+nameKey]);
+
+//example of bracket notation
+//let interest=prompt('What do you want to know about me? choose between firstName, lastName,age and friends')
+//console.log(interest);
+//console.log(JonasObject[interest]);
+//document.write(JonasObject[interest]);
+
+//if(JonasObject[interest]){
+//    console.log(JonasObject[interest]);
+    //document.write(JonasObject[interest]);
+//}else{
+//    console.log(`no property like that in my storage`);
+    //document.writeln(`no property like that in my storage`);
+//}
+
+//adding properties to the object.
+JonasObject.Company = ' The Jitu',
+JonasObject['School'] ='Dedan Kimathi University of Technology'; 
+console.log(JonasObject);
+
+//if(JonasObject[interest]){
+//    console.log(JonasObject[interest]);
+  //  document.write(JonasObject[interest]);
+//}else{
+//    console.log(`no property like that in my storage`);
+//    document.writeln(`no property like that in my storage`);
+//}
