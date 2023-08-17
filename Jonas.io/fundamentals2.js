@@ -174,3 +174,19 @@ console.log(JonasObject);
 //    console.log(`no property like that in my storage`);
 //    document.writeln(`no property like that in my storage`);
 //}
+console.log(`The first name is ${JonasObject.firstName} and the last name is ${JonasObject.lastName}`);
+
+const manu={
+    firstName: 'Emmanuel',
+    secondName: 'Getange',
+    birthYear: 2001,
+    job: 'Fullstack web Developer',
+    calAge: function(){
+        return 2023-this.birthYear;
+    }
+};
+const age5=manu.calAge(2001);
+console.log(age5);
+
+console.log("Using dot notation"+" "+manu.calAge());
+console.log('Using bracket notation'+" "+ manu['calAge']());
