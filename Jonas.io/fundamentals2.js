@@ -84,7 +84,7 @@ let checkWinner = function (scoreKoalas, scoreDolphins) {
 checkWinner(scoreKoalas, scoreDolphins);
 
 
-//ARRAYS.
+////////////////ARRAYS//////////////////
 let friends=['Emmanuel','DanielBrian','JoyElizabeth']
 console.log(friends);
 console.log("The total number of elements are :"+friends.length); // total number of friends in the array.
@@ -132,6 +132,7 @@ if(friends.includes('JoyElizabeth')) {
     console.log(`You have a friend called JoyElizabeth`)
 }
 
+//////////////////OBJECTS //////////////////
 // use of objects in javascript.
 const JonasObject ={
     firstName: "Mokomba",
@@ -181,12 +182,62 @@ const manu={
     secondName: 'Getange',
     birthYear: 2001,
     job: 'Fullstack web Developer',
-    calAge: function(){
-        return 2023-this.birthYear;
-    }
+    hasDriversLicense: true,
+
+  //  calAge: function(){
+    //    return 2023-birthYear;
+    //}
+
+   // calAge: function(){
+    //    return 2023-this.birthYear;
+   // }
+
+   calAge: function(){
+    this.age =2023-this.birthYear;
+    return age;
+},
+   getSummery: function(){
+    return `My name is ${this.firstName} ${this.secondName}. I am ${this.calAge()} years of age and  I am a ${this.job}.I ${this.hasDriversLicense ?'have' : 'dont have'} a driving license`;
+   }
 };
 const age5=manu.calAge(2001);
 console.log(age5);
 
 console.log("Using dot notation"+" "+manu.calAge());
 console.log('Using bracket notation'+" "+ manu['calAge']());
+
+const summery=manu.getSummery();
+console.log(summery);
+
+
+/* Write your code below. Good luck! 🙂 */
+
+//m's properties.
+const mark={
+    fullName : "Mark Miller's",
+    mass : 78,
+    height : 1.69,
+    calcBMI: function(){
+        return this.mass/ (this.height * this.height);
+    }
+}
+// John's propertis(full details)
+const john={
+    fullName : "John Smith's",
+    mass : 92,
+    height : 1.95,
+    calcBMI: function(){
+        return this.mass/ (this.height * this.height);
+    }
+}
+let MarkBMI= mark.calcBMI();
+mark['BMI']=MarkBMI;
+let JohnBMI=john.calcBMI();
+john['BMI']=JohnBMI;
+//console.log(m.BMI);
+
+if(MarkBMI>JohnBMI){
+    console.log(`${mark.fullName} BMI ${mark.BMI} is higher than ${john.fullName} BMI ${john.BMI}`);
+}else{
+    console.log(`${john.fullName} BMI (John.BMI) is higher than ${mark.fullName} BMI ${mark.BMI}`);
+}
