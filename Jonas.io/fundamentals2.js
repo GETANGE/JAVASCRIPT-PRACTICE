@@ -212,13 +212,14 @@ console.log(summery);
 
 /* Write your code below. Good luck! 🙂 */
 
-//m's properties.
+//mark's properties(full details)
 const mark={
     fullName : "Mark Miller's",
     mass : 78,
     height : 1.69,
     calcBMI: function(){
-        return this.mass/ (this.height * this.height);
+        this.bmi = this.mass/ (this.height * this.height);
+        return this.bmi;
     }
 }
 // John's propertis(full details)
@@ -227,7 +228,8 @@ const john={
     mass : 92,
     height : 1.95,
     calcBMI: function(){
-        return this.mass/ (this.height * this.height);
+        this.bmi=this.mass/ (this.height * this.height);
+        return this.bmi;
     }
 }
 let MarkBMI= mark.calcBMI();
