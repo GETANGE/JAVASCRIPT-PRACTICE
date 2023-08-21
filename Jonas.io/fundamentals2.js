@@ -243,3 +243,17 @@ if(MarkBMI>JohnBMI){
 }else{
     console.log(`${john.fullName} BMI (John.BMI) is higher than ${mark.fullName} BMI ${mark.BMI}`);
 }
+
+let nums=[20,23,67,0];
+function find_max(nums){
+    let max_num =Number.NEGATIVE_INFINITY;
+    for(let num of nums){
+        if(num > max_num){
+            max_num= num;
+        }
+    }
+    return max_num;
+}
+
+let numbers=find_max(nums);
+console.log("The maximum number is:"+" "+numbers);
