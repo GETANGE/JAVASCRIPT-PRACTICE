@@ -214,34 +214,35 @@ console.log(summery);
 
 //mark's properties(full details)
 const mark={
-    fullName : "Mark Miller's",
+    fullName : "Mark Miller",
     mass : 78,
     height : 1.69,
     calcBMI: function(){
         this.bmi = this.mass/ (this.height * this.height);
         return this.bmi;
     }
-}
+};
 // John's propertis(full details)
 const john={
-    fullName : "John Smith's",
+    fullName : "John Smith",
     mass : 92,
     height : 1.95,
     calcBMI: function(){
         this.bmi=this.mass/ (this.height * this.height);
         return this.bmi;
     }
-}
-let MarkBMI= mark.calcBMI();
-mark['BMI']=MarkBMI;
-let JohnBMI=john.calcBMI();
-john['BMI']=JohnBMI;
-//console.log(m.BMI);
+};
 
-if(MarkBMI>JohnBMI){
-    console.log(`${mark.fullName} BMI ${mark.BMI} is higher than ${john.fullName} BMI ${john.BMI}`);
-}else{
-    console.log(`${john.fullName} BMI (John.BMI) is higher than ${mark.fullName} BMI ${mark.BMI}`);
+//calcculate the BMI'S .
+mark.calcBMI();
+john.calcBMI();
+console.log("Mark's BMI"+" "+mark.bmi);
+console.log("John's BMI"+" "+john.bmi);
+
+if(mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`);
+}else if(mark.bmi < john.bmi) {
+    console.log(`${john.fullName}'s (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`);
 }
 
 let nums=[20,23,67,0];
