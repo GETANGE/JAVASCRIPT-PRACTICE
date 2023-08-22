@@ -258,3 +258,51 @@ function find_max(nums){
 
 let numbers=find_max(nums);
 console.log("The maximum number is:"+" "+numbers);
+
+
+///////////////////////LOOPING THROUGH ITEMS///
+////for loop.
+//for loop keeps running while the condition is TRUE.
+//rep++; increases until the condition is FALSE.
+for(let rep =1; rep <=10; rep++){
+    console.log(`Am a fullstack Developer ${rep}.`); // to ensure the the counter is incremented correctly ,use the rep varible defined using literals.
+    // counter variable.
+}
+
+const dataType =[];
+//looping through arrays...
+let friend=['Emmanuel','DanielBrian','JoyElizabeth',10,true]
+for(let i=0; i<friend.length; i++){
+    console.log(friend[i], typeof friend[i]); // [i] stands for , from the first index that is initialized.
+
+    //This line assigns the data type of the element at index i of the friend array to the ith element of the dataType array.
+    //dataType[i] = typeof friend[i];
+    dataType.push(typeof friend[i]); 
+}
+console.log(dataType);
+
+let year= new Array(2001,2002,2003,2004,2005,2006,2007,2008,2009);
+const Age=[];
+
+for(let i=0; i<year.length; i++){
+    Age.push(2023-year[i]);
+}
+console.log(Age);
+
+//continue and break statements.
+let friends1=['Emmanuel','DanielBrian','JoyElizabeth',10,true]
+console.log("--------ONLY STRINGS--------");
+for(let i=0; i<friends1.length; i++){
+    if(typeof friends1[i]!=='string') continue;
+        console.log(friends1[i], typeof friends1[i]);
+}
+console.log("--------ONLY NUMBERS--------");
+for(let i=0; i<friends1.length; i++){
+    if(typeof friends1[i]!=='number') continue;
+        console.log(friends1[i], typeof friends1[i]);
+}
+console.log("--------ONLY BOOLEAN--------");
+for(let i=0; i<friends1.length; i++){
+    if(typeof friends1[i]!=='boolean') continue;
+        console.log(friends1[i], typeof friends1[i]);
+}
