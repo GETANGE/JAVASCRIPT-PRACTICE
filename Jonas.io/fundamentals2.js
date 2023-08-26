@@ -348,3 +348,42 @@ while(dice !== 6){
         console.log(`The loop is about to end...`);
     }
 }
+
+//coding challange.
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+// Calculating tips
+for (let i = 0; i < bills.length; i++) {
+    const tip= calcTip(bills[i]); // Calculate the tips of the current array after every succesful loop.
+    tips.push(tip);
+}
+
+// Calculating totals
+for (let j = 0; j < tips.length; j++) {
+    const total=tips[j]+bills[j]; // For each bill at index j, it retrieves the corresponding tip from the tips array using the same index j.
+    totals.push(total);
+}
+console.log("The Bills are :"+bills);
+console.log("Their tips are :"+tips);
+console.log("Their totals :"+totals);
+
+//calculating the average.
+//function for setting the conditions.
+const average=function(arr){
+    let sum=0;
+    for(let i=0; i<arr.length; i++){
+        //sum = sum + arr[i].
+        sum+=arr[i];
+    }
+    return sum / arr.length;
+}
+let billsAverage=average(bills);
+let tipsAverage=average(tips);
+console.log("The total average of bills is :"+billsAverage);
+console.log("The total average for tips is :"+tipsAverage);
