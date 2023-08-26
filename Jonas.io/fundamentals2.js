@@ -303,6 +303,48 @@ for(let i=0; i<friends1.length; i++){
 }
 console.log("--------ONLY BOOLEAN--------");
 for(let i=0; i<friends1.length; i++){
-    if(typeof friends1[i]!=='boolean') continue;
+    if(typeof friends1[i]!=='boolean'){
+        continue;
+    }
         console.log(friends1[i], typeof friends1[i]);
+}
+
+// Looping Backwards and loops in loops
+// 4,3, ......., 0
+for(let i=friends1.length-1; i>=0; i--){
+    console.log(friends1[i], typeof friends1[i]);
+}
+let number=[1,2,3,4,5,6,7,8,9];
+for(let i=number.length-1; i>=0; i--) {
+    console.log(number[i], typeof number[i]);
+}
+
+//loop inside a loop.
+console.log(`------LOOPING INSIDE A LOOP------`);
+for(let exercise = 1; exercise<4; exercise++){
+    console.log(`------Exercise: ${exercise}`);
+
+    for(let rep=1; rep<=5; rep++){
+        console.log(`-Lifting weights is mandatory ${rep}-`);
+    }
+}
+
+/////WHILE LOOP////.
+let rep2 = 1;
+while(rep2 <= 5){
+    console.log(`WHILE LOOP-Lifting weights is mandatory ${rep2}`);
+    rep2++;
+}
+
+//example 2 : not depending on a counter.
+//rolling dice .
+let dice = Math.trunc(Math.random() * 6)+1;
+
+while(dice !== 6){
+    console.log(`You rolled a : ${dice}`);
+    dice = Math.trunc(Math.random() * 6)+1;
+
+    if(dice === 6){
+        console.log(`The loop is about to end...`);
+    }
 }
