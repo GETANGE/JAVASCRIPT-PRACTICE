@@ -65,6 +65,7 @@ class Car{
     }
 
     //define  the method
+    //using object literals.
     display1(){
         console.log(`Car Name: ${this.name}, the Owner is : ${this.owner} ,the model is : ${this.model} and the number plate is : ${this.registration}` );
     }

@@ -75,3 +75,19 @@ const  calcAmplitude = function(value){
 }
 let result = calcAmplitude(temperature);
 console.log("The amplitude is :  "+result);
+
+const kelvin = function(){
+    const measurement = {
+        temp:'value',
+        unit:'Celsius',
+
+        //fix this bug.
+        // change the string to a number.
+        value:Number(prompt('Degrees celsius')),
+    }
+
+    console.table(measurement)
+    const kelvin = measurement.value + 273;
+    return kelvin;
+}
+kelvin();
