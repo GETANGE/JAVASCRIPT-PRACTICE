@@ -91,3 +91,37 @@ const kelvin = function(){
     return kelvin;
 }
 kelvin();
+
+
+function solution(nums){
+  
+    // condition to check for null or empty arrays
+    if(!Array.isArray(nums) || nums.length === 0){
+      return [];
+    }
+    
+    // bubblesort method to sort the array in ascending order.
+    for(let i=0; i<nums.length; i++){
+      for(let j=0; j<nums.length-i-1; j++){
+        if(nums[j]>nums[j+1]){
+          const temp = nums[j];
+          nums[j] = nums[j+1];
+          nums[j+1]= temp;
+        }
+      }
+    }
+    return nums;
+  }
+  const array = [1, 2, 10, 50, 5];
+  const emptyArray = [];
+  const nullArray1 = null;
+  
+  // calling the function passing the array as parameters
+  const sortedArray = solution(array);
+  const empty =solution(emptyArray);
+  const nullArray=solution(nullArray1);
+  
+  //display solutions.
+  console.log(sortedArray);
+  console.log(empty);
+  console.log(nullArray);
