@@ -83,7 +83,7 @@ const kelvin = function(){
 
         //fix this bug.
         // change the string to a number.
-        value:Number(prompt('Degrees celsius')),
+ //       value:Number(prompt('Degrees celsius')),
     }
 
     console.table(measurement)
@@ -92,7 +92,7 @@ const kelvin = function(){
 }
 kelvin();
 
-
+// SORTING NUMBERS.
 function solution(nums){
   
     // condition to check for null or empty arrays
@@ -125,3 +125,18 @@ function solution(nums){
   console.log(sortedArray);
   console.log(empty);
   console.log(nullArray);
+
+//challange solution: forecasting
+const data1 =[17,21,23];
+const data2 =[12, 5, -5, 0, 4];
+
+let forecasting = function(arr){
+    //2 : breaking into subproblems.
+    //step 1: Transform the array into string.
+    let str='';
+    for(let i=0; i<arr.length; i++){
+        str = str+ `${arr[i]}C in ${i + 1} days...  `;
+    }
+    console.log('...'+str);
+}
+forecasting(data2);
