@@ -31,3 +31,36 @@ if(document.getElementsByClassName('label-score').textContent !== ''){
 }else{
     console.log(`No text content`);
 }
+
+//real life application .
+//implementation of the logic.
+let score = 20;
+const random = Math.trunc(Math.random()*20)+1; // random number from 1-20
+document.querySelector('.number').textContent = random;
+
+let button=document.querySelector('.check');
+//add eventListener.
+button.addEventListener('click', function(){
+    // convert the string to a number .
+    let number =Number(document.querySelector('.guess').value);
+    console.log(number,typeof number);
+
+    // if there is no value.
+    if(!number){
+        document.querySelector('.message').textContent = 'No number selected';
+    }else if(number === random){
+        document.querySelector('.message').textContent = 'Correct number';
+    }else if (number > random){
+        if(score > 0){
+            document.querySelector('.message').textContent = 'Number is too high !';
+            score--;
+            document.querySelector('.score').textContent = score;
+        }else{
+           document.querySelector('.message').textContent = 'You lost !';
+        }
+    }else{
+        document.querySelector('.message').textContent = 'Too Low !';
+        score--;
+        document.querySelector('.score').textContent = score; 
+    }
+})
