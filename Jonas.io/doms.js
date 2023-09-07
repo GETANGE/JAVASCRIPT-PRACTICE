@@ -35,6 +35,7 @@ if(document.getElementsByClassName('label-score').textContent !== ''){
 //real life application .
 //implementation of the logic.
 let score = 20;
+
 const random = Math.trunc(Math.random()*20)+1; // random number from 1-20
 document.querySelector('.number').textContent = random;
 
@@ -53,14 +54,20 @@ button.addEventListener('click', function(){
     }else if (number > random){
         if(score > 0){
             document.querySelector('.message').textContent = 'Number is too high !';
+            // decrement the score per click.
             score--;
             document.querySelector('.score').textContent = score;
         }else{
-           document.querySelector('.message').textContent = 'You lost !';
+           document.querySelector('.message').textContent = 'You lost the game !';
+           document.querySelector('.score').textContent = 0 ;
         }
-    }else{
-        document.querySelector('.message').textContent = 'Too Low !';
-        score--;
-        document.querySelector('.score').textContent = score; 
+    }else if(number < random){
+        document.querySelector('.message').textContent ='Number is too low!';
+        score-- ;
+        document.querySelector('.score').textContent = score ;
+        if(score < 0){
+            document.querySelector('.score').textContent = 0 ;
+            document.querySelector('.message').textContent = 'You lost the game !';
+        }
     }
 })
