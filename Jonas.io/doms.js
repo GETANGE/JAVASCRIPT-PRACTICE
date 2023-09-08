@@ -37,52 +37,61 @@ if(document.getElementsByClassName('label-score').textContent !== ''){
 let score = 20;
 
 const random = Math.trunc(Math.random()*20)+1; // random number from 1-20
-document.querySelector('.number').textContent = random;
+
 
 let button=document.querySelector('.check');
+
 //add eventListener.
 button.addEventListener('click', function(){
+    let messageText = document.querySelector('.message');
+    let bodyText = document.querySelector('body');
+    let numberText = document.querySelector('.number');
+    let scoreText = document.querySelector('.score');
+
     // convert the string to a number .
     let number =Number(document.querySelector('.guess').value);
     console.log(number,typeof number);
 
     // if there is no value.
     if(!number){
-        document.querySelector('.message').textContent = 'No number selected';
+        messageText.textContent = 'No number selected';
 
         // when the player wins 
     }else if(number === random){
-        document.querySelector('.message').textContent = 'Correct number';
+        numberText.textContent = random;
+        messageText.textContent = 'Correct number';
         
-        document.querySelector('body').style.backgroundColor = '#60b347';
-        document.querySelector('.number').style.width = '30rem';
+        bodyText.style.backgroundColor = '#60b347';
+        numberText.style.width = '30rem';
 
         //when the player goes too high.
     }else if (number > random){
         if(score > 0){
-            document.querySelector('.message').textContent = 'Number is too high !';
+            messageText.textContent = 'Number is too high !';
             // decrement the score per click.
             score--;
-            document.querySelector('.score').textContent = score;
-            document.querySelector('body').style.backgroundColor = '#222';
-            
+
+            scoreText.textContent = score;
+            bodyText.style.backgroundColor = '#222';
+
         }else{
-           document.querySelector('.message').textContent = 'You lost the game !';
-           document.querySelector('.score').textContent = 0 ;
-           document.querySelector('body').style.backgroundColor = '#222';
+           messageText.textContent = 'You lost the game !';
+           scoreText.textContent = 0 ;
+           bodyText.style.backgroundColor = '#222';
         }
 
         //when the player goes too low .
     }else if(number < random){
-        document.querySelector('.message').textContent ='Number is too low!';
+        messageText.textContent ='Number is too low!';
         score-- ;
-        document.querySelector('.score').textContent = score ;
-        document.querySelector('body').style.backgroundColor = '#222';
+
+        scoreText.textContent = score ;
+        bodyText.style.backgroundColor = '#222';
 
         if(score < 0){
-            document.querySelector('.score').textContent = 0 ;
-            document.querySelector('.message').textContent = 'You lost the game !';
-            document.querySelector('body').style.backgroundColor = '#222';
+            scoreText.textContent = 0 ;
+            messageText.textContent = 'You lost the game !';
+            bodyText.style.backgroundColor = '#222';
         }
     }
 });
