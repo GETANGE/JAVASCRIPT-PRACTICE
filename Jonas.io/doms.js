@@ -49,25 +49,40 @@ button.addEventListener('click', function(){
     // if there is no value.
     if(!number){
         document.querySelector('.message').textContent = 'No number selected';
+
+        // when the player wins 
     }else if(number === random){
         document.querySelector('.message').textContent = 'Correct number';
+        
+        document.querySelector('body').style.backgroundColor = '#60b347';
+        document.querySelector('.number').style.width = '30rem';
+
+        //when the player goes too high.
     }else if (number > random){
         if(score > 0){
             document.querySelector('.message').textContent = 'Number is too high !';
             // decrement the score per click.
             score--;
             document.querySelector('.score').textContent = score;
+            document.querySelector('body').style.backgroundColor = '#222';
+            
         }else{
            document.querySelector('.message').textContent = 'You lost the game !';
            document.querySelector('.score').textContent = 0 ;
+           document.querySelector('body').style.backgroundColor = '#222';
         }
+
+        //when the player goes too low .
     }else if(number < random){
         document.querySelector('.message').textContent ='Number is too low!';
         score-- ;
         document.querySelector('.score').textContent = score ;
+        document.querySelector('body').style.backgroundColor = '#222';
+
         if(score < 0){
             document.querySelector('.score').textContent = 0 ;
             document.querySelector('.message').textContent = 'You lost the game !';
+            document.querySelector('body').style.backgroundColor = '#222';
         }
     }
-})
+});
