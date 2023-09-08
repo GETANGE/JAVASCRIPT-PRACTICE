@@ -35,9 +35,10 @@ if(document.getElementsByClassName('label-score').textContent !== ''){
 //real life application .
 //implementation of the logic.
 let score = 20;
+let highscore = 0;
 
 const random = Math.trunc(Math.random()*20)+1; // random number from 1-20
-
+console.log(random);
 
 let button=document.querySelector('.check');
 
@@ -47,6 +48,7 @@ button.addEventListener('click', function(){
     let bodyText = document.querySelector('body');
     let numberText = document.querySelector('.number');
     let scoreText = document.querySelector('.score');
+    let highScore = document.querySelector('.highscore');
 
     // convert the string to a number .
     let number =Number(document.querySelector('.guess').value);
@@ -59,11 +61,15 @@ button.addEventListener('click', function(){
         // when the player wins 
     }else if(number === random){
         numberText.textContent = random;
-        messageText.textContent = 'Correct number';
+        messageText.textContent = 'Correct number !';
         
         bodyText.style.backgroundColor = '#60b347';
         numberText.style.width = '30rem';
 
+        if(score > highscore) {
+            highscore = score;
+            highScore.textContent =highscore;
+        }
         //when the player goes too high.
     }else if (number > random){
         if(score > 0){
@@ -95,3 +101,25 @@ button.addEventListener('click', function(){
         }
     }
 });
+
+// reset functionality .
+
+    let again = document.querySelector('.again');
+    again.addEventListener('click', function(e){
+        let messageText = document.querySelector('.message'); 
+        let scoreText = document.querySelector('.score');
+        let numberText = document.querySelector('.number');
+        let guessText = document.querySelector('.guess');
+        let bodyText = document.querySelector('body');
+    
+        // restore initial values of the score .
+       let score = 20;
+       let random = Math.trunc(Math.random()*20)+1;
+    
+        messageText.textContent = 'Start guessing...';
+        scoreText.textContent = score;
+        numberText.textContent ='?'
+        bodyText.style . backgroundColor ='#222';
+        numberText.style.width =' 15rem';
+        guessText.value = '';
+    });
