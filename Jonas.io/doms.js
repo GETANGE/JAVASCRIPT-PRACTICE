@@ -114,7 +114,6 @@ button.addEventListener('click', function(){
     
         // restore initial values of the score .
        let score = 20;
-       let random = Math.trunc(Math.random()*20)+1;
     
         messageText.textContent = 'Start guessing...';
         scoreText.textContent = score;
