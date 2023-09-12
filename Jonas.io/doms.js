@@ -122,5 +122,3 @@ button.addEventListener('click', function(){
         numberText.style.width =' 15rem';
         guessText.value = '';
     });
-
- // PROJECT 2 : Modal Window .
