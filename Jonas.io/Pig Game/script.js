@@ -61,6 +61,8 @@ btnRoll.addEventListener('click', function(){
  }
 })
 
+
+//TODO: FIX THE BUG detected here.
 // implementing the hold button .
 btnHold.addEventListener("click",function(){
     if(playing){
@@ -80,6 +82,7 @@ btnHold.addEventListener("click",function(){
     }
 });
 
+//TODO: SOLVE THE BUG  and implement this functonality.
 // resetting the game functionality.
 btnNew.addEventListener('click', function(){
 player0El.textContent = 0
